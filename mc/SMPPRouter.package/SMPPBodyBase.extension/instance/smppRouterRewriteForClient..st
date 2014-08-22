@@ -1,0 +1,3 @@
+*SMPPRouter
+smppRouterRewriteForClient: aRouter
+	"Nothing.."
