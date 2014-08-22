@@ -1,0 +1,15 @@
+{
+	"category" : "SMPPRouter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"master",
+		"clientManager" ],
+	"name" : "SMPPRouter",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
