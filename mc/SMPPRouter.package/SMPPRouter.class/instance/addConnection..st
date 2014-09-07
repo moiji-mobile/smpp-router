@@ -8,3 +8,4 @@ addConnection: aConnection
 		onUnhandledResponse: [:conn :msg |
 			Transcript nextPutAll: 'Unknown response on command. Should not happen'; cr.
 		].
+	connections add: aConnection

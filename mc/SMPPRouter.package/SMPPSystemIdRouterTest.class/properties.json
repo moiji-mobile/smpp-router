@@ -1,0 +1,14 @@
+{
+	"category" : "SMPPRouter-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"smppRouter" ],
+	"name" : "SMPPSystemIdRouterTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

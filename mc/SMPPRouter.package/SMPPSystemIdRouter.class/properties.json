@@ -1,0 +1,14 @@
+{
+	"category" : "SMPPRouter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "HolgerHansPeterFreyther 9/7/2014 17:49",
+	"instvars" : [
+		"routes" ],
+	"name" : "SMPPSystemIdRouter",
+	"pools" : [
+		 ],
+	"super" : "SMPPRouter",
+	"type" : "normal" }
