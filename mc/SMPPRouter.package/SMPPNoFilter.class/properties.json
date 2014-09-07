@@ -6,11 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"connections",
-		"filter",
-		"patcher" ],
-	"name" : "SMPPRouter",
+		 ],
+	"name" : "SMPPNoFilter",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "SMPPFilter",
 	"type" : "normal" }

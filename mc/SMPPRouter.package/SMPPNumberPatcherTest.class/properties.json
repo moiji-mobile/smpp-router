@@ -1,16 +1,14 @@
 {
-	"category" : "SMPPRouter",
+	"category" : "SMPPRouter-Tests",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"connections",
-		"filter",
-		"patcher" ],
-	"name" : "SMPPRouter",
+		"smppRouter" ],
+	"name" : "SMPPNumberPatcherTest",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TestCase",
 	"type" : "normal" }

@@ -8,3 +8,4 @@ rewriteDeliverSM: aDeliverSM
 	address := aDeliverSM sourceAddress.
 	(address beginsWith: '18888')
 		ifTrue: [aDeliverSM sourceAddress: (address allButFirst: 5)].
+	^aDeliverSM

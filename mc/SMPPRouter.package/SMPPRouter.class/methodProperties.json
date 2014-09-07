@@ -2,8 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
-		"addClient:" : "HolgerHansPeterFreyther 8/22/2014 20:01",
-		"addMaster:" : "HolgerHansPeterFreyther 8/22/2014 20:01",
-		"rewriteDeliverSM:" : "RochAlexandreNomine 8/26/2014 22:10",
-		"sendToClient:" : "HolgerHansPeterFreyther 8/26/2014 20:33",
-		"sendToMaster:" : "HolgerHansPeterFreyther 8/26/2014 20:35" } }
+		"addConnection:" : "HolgerHansPeterFreyther 9/7/2014 15:48",
+		"filter" : "HolgerHansPeterFreyther 9/7/2014 17:18",
+		"filter:" : "HolgerHansPeterFreyther 9/7/2014 17:18",
+		"initialize" : "HolgerHansPeterFreyther 9/7/2014 16:49",
+		"patcher" : "HolgerHansPeterFreyther 9/7/2014 17:12",
+		"patcher:" : "HolgerHansPeterFreyther 9/7/2014 17:11",
+		"routeCommand:from:" : "HolgerHansPeterFreyther 9/7/2014 17:05",
+		"selectRouteFor:from:" : "HolgerHansPeterFreyther 9/7/2014 17:15",
+		"sendUnroutableFor:to:" : "HolgerHansPeterFreyther 9/7/2014 16:59" } }
