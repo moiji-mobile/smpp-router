@@ -1,0 +1,14 @@
+{
+	"category" : "ConfigurationOfSMPPRouter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"LastVersionLoad" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"project" ],
+	"name" : "ConfigurationOfSMPPRouter",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
