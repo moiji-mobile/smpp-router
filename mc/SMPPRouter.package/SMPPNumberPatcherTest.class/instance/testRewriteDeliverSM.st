@@ -1,7 +1,7 @@
 as yet unclassified
 testRewriteDeliverSM
 	| deliverSM msg parsedAgain body |
-	deliverSM := SMPPMessage readFrom: self exampleDeliverSM readStream.
+	deliverSM := self class deliverSM.
 	self assert: deliverSM body sourceAddress equals: '1888817024782276'.
 	self assert: deliverSM body destinationAddress equals: '1888817024782276'.
 

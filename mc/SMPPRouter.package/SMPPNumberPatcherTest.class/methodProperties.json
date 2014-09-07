@@ -1,7 +1,7 @@
 {
 	"class" : {
-		 },
+		"deliverSM" : "HolgerHansPeterFreyther 9/7/2014 18:32",
+		"exampleDeliverSM" : "HolgerHansPeterFreyther 9/7/2014 18:32" },
 	"instance" : {
-		"exampleDeliverSM" : "HolgerHansPeterFreyther 9/7/2014 17:11",
 		"setUp" : "HolgerHansPeterFreyther 9/7/2014 17:09",
-		"testRewriteDeliverSM" : "HolgerHansPeterFreyther 9/7/2014 17:10" } }
+		"testRewriteDeliverSM" : "HolgerHansPeterFreyther 9/7/2014 18:32" } }
