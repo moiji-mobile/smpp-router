@@ -21,7 +21,7 @@ testEndToEndSuccess
 		nextSequenceNumber;
 		nextSequenceNumber.
 	self assert: dest handler nextSequenceNumber equals: 3.
-	source dispatchMessage: (SMPPNumberPatcherTest deliverSM).
+	source handler dispatchMessage: (SMPPNumberPatcherTest deliverSM).
 	self assert: source sent size equals: 0.
 	self assert: dest sent size equals: 1.
 	command := SMPPMessage readFrom: dest sent first readStream.
@@ -31,7 +31,7 @@ testEndToEndSuccess
 	"Return it as unroutable with a trick"
 	command := command smppUnroutableResponse.
 	command header commandStatus: 0.
-	dest dispatchMessage: command.
+	dest handler dispatchMessage: command.
 	self assert: dest sent size equals: 1.
 	self assert: source sent size equals: 1.
 	command := SMPPMessage readFrom: source sent first readStream.

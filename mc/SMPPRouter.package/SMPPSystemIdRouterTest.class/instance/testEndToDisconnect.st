@@ -21,7 +21,7 @@ testEndToDisconnect
 		nextSequenceNumber;
 		nextSequenceNumber.
 	self assert: dest handler nextSequenceNumber equals: 3.
-	source dispatchMessage: (SMPPNumberPatcherTest deliverSM).
+	source handler dispatchMessage: (SMPPNumberPatcherTest deliverSM).
 	self assert: source sent size equals: 0.
 	self assert: dest sent size equals: 1.
 	command := SMPPMessage readFrom: dest sent first readStream.
