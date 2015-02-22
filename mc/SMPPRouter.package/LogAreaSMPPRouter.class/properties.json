@@ -1,0 +1,14 @@
+{
+	"category" : "SMPPRouter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "HolgerHansPeterFreyther 2/22/2015 21:25",
+	"instvars" : [
+		 ],
+	"name" : "LogAreaSMPPRouter",
+	"pools" : [
+		 ],
+	"super" : "LogArea",
+	"type" : "normal" }

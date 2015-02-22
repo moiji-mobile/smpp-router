@@ -1,0 +1,1 @@
+I am the LogArea for the SMPPRouter.
