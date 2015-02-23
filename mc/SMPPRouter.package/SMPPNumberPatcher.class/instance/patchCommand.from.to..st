@@ -1,3 +1,3 @@
 as yet unclassified
-patchCommand: aCommand from: aConnection to: aRemoteConnection
+patchCommand: aCommand from: aHandler to: aRemoteConnection
 	^aCommand body smppRouterRewriteForClient: self

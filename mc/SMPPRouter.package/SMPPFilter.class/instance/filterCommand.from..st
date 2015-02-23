@@ -1,3 +1,3 @@
 as yet unclassified
-filterCommand: aCommand from: aConnection
+filterCommand: aCommand from: aHandler
 	^self subclassResponsibility

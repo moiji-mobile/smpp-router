@@ -5,10 +5,10 @@ addConnection: aConnection
 						expandMacrosWith: aConnection systemId) area: #smppRouter.
 
 	aConnection
-		onUnhandledCommand: [:conn :msg |
-			self routeCommand: msg from: conn];
-		onUnhandledResponse: [:conn :msg |
+		onUnhandledCommand: [:handler :msg |
+			self routeCommand: msg from: handler];
+		onUnhandledResponse: [:handler :msg |
 			self logError: ('SMPPRouter response to unknown command on systemId(<1p>)'
-							expandMacrosWith: conn systemId) area: #smppRouter.
+							expandMacrosWith: handler systemId) area: #smppRouter.
 		].
 	connections add: aConnection
