@@ -5,6 +5,7 @@
 		"setUp" : "HolgerHansPeterFreyther 9/7/2014 17:52",
 		"testEndToDisconnect" : "HolgerHansPeterFreyther 9/8/2014 19:29",
 		"testEndToEnd" : "HolgerHansPeterFreyther 9/8/2014 19:30",
+		"testEndToEndExtendedRoute" : "HolgerHansPeterFreyther 3/8/2015 17:26",
 		"testEndToEndSuccess" : "HolgerHansPeterFreyther 9/8/2014 19:30",
 		"testEndToEndWithManager" : "HolgerHansPeterFreyther 2/23/2015 17:06",
 		"testRouteLookup" : "HolgerHansPeterFreyther 9/7/2014 17:59" } }

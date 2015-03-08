@@ -1,0 +1,15 @@
+{
+	"category" : "SMPPRouter-Route",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"sourceAddressMatcher",
+		"destinationAddressMatcher" ],
+	"name" : "SMPPSystemIdBodyRoute",
+	"pools" : [
+		 ],
+	"super" : "SMPPSystemIdRoute",
+	"type" : "normal" }
