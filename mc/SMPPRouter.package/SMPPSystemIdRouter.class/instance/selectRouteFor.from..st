@@ -1,11 +1,13 @@
 as yet unclassified
 selectRouteFor: aCommand from: aHandler
-	| routeName |
-	routeName := routes at: aHandler systemId ifAbsent: [
+	| route routeName |
+	route := self findRouteFor: aCommand from: aHandler.
+	route ifNil: [
 		self logNotice: ('SMPPSystemIdRouter no routes for systemId(<1p>)'
 						expandMacrosWith: aHandler systemId) area: #smppRouter.
 		^nil].
 
+	routeName := route destinationId.
 	"Check if there is a target system and if it is available"
 	connections do: [:each |
 		each systemId = routeName ifTrue: [
