@@ -1,14 +1,12 @@
 initialization
 addConnection: aConnection
 	"Remember where we want to route it to."
-	self logDebug: ('SMPPRouter adding connection systemId(<1p>) to the list'
-						expandMacrosWith: aConnection systemId) area: #smppRouter.
+	logger logDebug: 'Adding connection' with: {aConnection}.
 
 	aConnection
 		onUnhandledCommand: [:handler :msg |
 			self routeCommand: msg from: handler];
 		onUnhandledResponse: [:handler :msg |
-			self logError: ('SMPPRouter response to unknown command on systemId(<1p>)'
-							expandMacrosWith: handler systemId) area: #smppRouter.
+			logger logError: 'Response to unknown command' with: {handler}.
 		].
 	connections add: aConnection

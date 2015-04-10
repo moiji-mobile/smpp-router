@@ -8,7 +8,8 @@
 	"instvars" : [
 		"connections",
 		"filter",
-		"patcher" ],
+		"patcher",
+		"logger" ],
 	"name" : "SMPPRouter",
 	"pools" : [
 		 ],

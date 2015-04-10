@@ -3,8 +3,7 @@ selectRouteFor: aCommand from: aHandler
 	| route routeName |
 	route := self findRouteFor: aCommand from: aHandler.
 	route ifNil: [
-		self logNotice: ('SMPPSystemIdRouter no routes for systemId(<1p>)'
-						expandMacrosWith: aHandler systemId) area: #smppRouter.
+		logger logNotice: 'no routes' with: {'cmd'->aCommand. 'from'->aHandler}.
 		^nil].
 
 	routeName := route destinationId.
@@ -15,10 +14,8 @@ selectRouteFor: aCommand from: aHandler
 			conn := each anyAuthenticatedConnection.
 			conn ifNotNil: [
 				conn isConnected ifTrue: [
-					self logDebug: ('SMPPSystemIdRouter selected route for systemId(<1p>) to systemId(<2p>)'
-										expandMacrosWith: aHandler systemId with: routeName) area: #smppRouter.
+					logger logDebug: 'Selected route' with: {'from'->aHandler. 'to'->conn}.
 					^conn]]]].
 
-	self logNotice: ('SMPPSystemIdRouter nothing connected for systemId(<1p>) -> systemId(<2p>)'
-						expandMacrosWith: aHandler systemId with: routeName) area: #smppRouter.
+	logger logNotice: 'No route available' with: {'from'->aHandler. route}.
 	^nil

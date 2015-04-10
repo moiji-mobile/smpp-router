@@ -2,8 +2,7 @@ as yet unclassified
 routeCommand: aCommand from: aHandler
 	| remote smppCommand body origSeqNumber |
 
-	self logNotice: ('SMPPRouter routing <1p> from <2p>'
-						expandMacrosWith: aCommand body class with: aHandler systemId) area: #smppRouter.
+	logger logNotice: 'Routing message to system' with: {'cmd'->aCommand. 'from'->aHandler}.
 
 	"See if we can forward the message?"
 	(filter filterCommand: aCommand from: aHandler)
@@ -28,7 +27,7 @@ routeCommand: aCommand from: aHandler
 		onResult: [:result |
 			self returnResponse: result to: aHandler with: origSeqNumber];
 		onTimeout: [
-			self logError: 'SMPPRouter command timed out. Ignoring' area: #smppRouter.
+			logger logError: 'Command timed out. Ignoring' with: {aCommand. aHandler}.
 			 "TODO!"
 		];
 		yourself.

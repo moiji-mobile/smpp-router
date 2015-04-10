@@ -1,7 +1,7 @@
 as yet unclassified
 sendUnroutableFor: aCommand to: aHandler
 	| response |
-	self logError: ('SMPPRouter command unroutable <1p> on systemId(<2p>)'
-					expandMacrosWith: aCommand body class with: aHandler systemId) area: #smppRouter.
+	logger logError: 'Command unroutable' with: {'cmd'->aCommand.  'to'->aHandler}.
+
 	response := aCommand smppUnroutableResponse.
 	response ifNotNil: [aHandler sendDirect: response toMessage asByteArray].
