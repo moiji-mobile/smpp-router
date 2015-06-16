@@ -4,13 +4,8 @@ baseline01: spec
 
 	spec for: #'common' do: [
 		spec blessing: #'baseline'.
-		spec repository: 'http://smalltalkhub.com/mc/osmocom/Osmocom/main/'.
+		spec repository: 'http://smalltalkhub.com/mc/osmocom/SMPPRouter/main/'.
 		spec 
-			project: 'Osmocom' with: [
-				spec
-					className: #ConfigurationOfOsmocom;
-					versionString: #'bleedingEdge';
-					repository: 'http://smalltalkhub.com/mc/osmocom/Osmocom/main/' ];
 			project: 'RFB' with: [
 				spec
 					className: #ConfigurationOfRFB;
