@@ -10,11 +10,17 @@ baseline01: spec
 				spec
 					className: #ConfigurationOfRFB;
 					versionString: #'stable';
-					repository: 'http://smalltalkhub.com/mc/PharoExtras/RFB/main/' ].
-		spec 
-			package: #'SMPP-Codec' with: [
-				spec requires: #('Osmocom' ). ];
-			package: #'SMPP-Connection' with: [
-				spec requires: #(#'SMPP-Codec' 'Osmocom' ). ];
-			package: #SMPPRouter with: [
-				spec requires: #(#'SMPP-Connection' #'SMPP-Codec' ). ]. ].
+					repository: 'http://smalltalkhub.com/mc/PharoExtras/RFB/main/' ];
+			project: 'SMPP' with: [
+				spec
+					className: #ConfigurationOfSMPP;
+					versionString: #'bleedingEdge';
+					repository: 'http://smalltalkhub.com/mc/osmocom/SMPP/main/' ];
+			project: 'OsmoLogging' with: [
+				spec
+					className: #ConfigurationOfOsmoLogging;
+					versionString: #'bleedingEdge';
+					repository: 'http://smalltalkhub.com/mc/osmocom/Logging/main/' ].
+		spec package: #SMPPRouter with: [
+				spec requires: #('SMPP' 'OsmoLogging' ). ].
+		spec group: 'default' with: #(#SMPPRouter 'RFB' ). ].
