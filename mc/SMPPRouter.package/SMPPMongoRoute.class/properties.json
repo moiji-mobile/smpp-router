@@ -1,0 +1,16 @@
+{
+	"category" : "SMPPRouter-Mongo",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"msisdn",
+		"customerName",
+		"systemId" ],
+	"name" : "SMPPMongoRoute",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

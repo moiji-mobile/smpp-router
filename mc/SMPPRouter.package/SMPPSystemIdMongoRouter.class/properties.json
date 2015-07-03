@@ -4,10 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "HolgerHansPeterFreyther 9/7/2014 17:49",
+	"commentStamp" : "HolgerHansPeterFreyther 7/3/2015 12:19",
 	"instvars" : [
-		"routes" ],
-	"name" : "SMPPSystemIdRouter",
+		"database" ],
+	"name" : "SMPPSystemIdMongoRouter",
 	"pools" : [
 		 ],
 	"super" : "SMPPSystemIdRouterBase",
