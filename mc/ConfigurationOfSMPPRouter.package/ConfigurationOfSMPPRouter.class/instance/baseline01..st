@@ -20,7 +20,12 @@ baseline01: spec
 				spec
 					className: #ConfigurationOfOsmoLogging;
 					versionString: #'bleedingEdge';
-					repository: 'http://smalltalkhub.com/mc/osmocom/Logging/main/' ].
+					repository: 'http://smalltalkhub.com/mc/osmocom/Logging/main/' ];
+			project: 'VoyageMongo' with: [
+				spec
+					className: #ConfigurationOfVoyageMongo;
+					versionString: #'stable';
+					repository: 'http://smalltalkhub.com/mc/Pharo/MetaRepoForPharo30/main/' ].
 		spec package: #SMPPRouter with: [
-				spec requires: #('SMPP' 'OsmoLogging' ). ].
+				spec requires: #('SMPP' 'OsmoLogging' 'VoyageMongo' ). ].
 		spec group: 'default' with: #(#SMPPRouter 'RFB' ). ].
