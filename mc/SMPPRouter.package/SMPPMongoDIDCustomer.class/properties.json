@@ -6,9 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"msisdn",
-		"customer" ],
-	"name" : "SMPPMongoRoute",
+		"customerName",
+		"systemId",
+		"sipProxyIp",
+		"sipProxyPort" ],
+	"name" : "SMPPMongoDIDCustomer",
 	"pools" : [
 		 ],
 	"super" : "Object",
