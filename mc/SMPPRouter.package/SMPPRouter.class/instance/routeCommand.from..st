@@ -3,10 +3,12 @@ routeCommand: aCommand from: aHandler
 	| remote smppCommand body origSeqNumber |
 
 	logger logNotice: 'Routing message to system' with: {'cmd'->aCommand. 'from'->aHandler}.
+	routeReqCounter increment.
 
 	"See if we can forward the message?"
-	(filter filterCommand: aCommand from: aHandler)
-		ifTrue: [^self].
+	(filter filterCommand: aCommand from: aHandler) ifTrue: [
+		filterCounter increment.
+		^self].
 
 	"We have a new command and need to select a route"
 	remote := self selectRouteFor: aCommand from: aHandler.
@@ -27,6 +29,7 @@ routeCommand: aCommand from: aHandler
 		onResult: [:result |
 			self returnResponse: result to: aHandler with: origSeqNumber];
 		onTimeout: [
+			timeoutCounter increment.
 			logger logError: 'Command timed out. Ignoring' with: {aCommand. aHandler}.
 			 "TODO!"
 		];
