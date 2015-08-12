@@ -1,0 +1,14 @@
+{
+	"category" : "SMPPRouter-Mongo-Rest",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "HolgerHansPeterFreyther 8/12/2015 16:36",
+	"instvars" : [
+		"database" ],
+	"name" : "SMPPMongoDIDCustomerRest",
+	"pools" : [
+		 ],
+	"super" : "ZnJSONRestCall",
+	"type" : "normal" }

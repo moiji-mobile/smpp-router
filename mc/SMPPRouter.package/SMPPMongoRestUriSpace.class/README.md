@@ -1,0 +1,1 @@
+Is this better than creating a intermediate base class for customers and routes?

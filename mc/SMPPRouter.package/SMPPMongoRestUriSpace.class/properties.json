@@ -1,0 +1,14 @@
+{
+	"category" : "SMPPRouter-Mongo-Rest",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "HolgerHansPeterFreyther 8/12/2015 17:00",
+	"instvars" : [
+		"database" ],
+	"name" : "SMPPMongoRestUriSpace",
+	"pools" : [
+		 ],
+	"super" : "ZnRestUriSpace",
+	"type" : "normal" }
