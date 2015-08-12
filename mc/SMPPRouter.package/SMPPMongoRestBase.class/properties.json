@@ -4,11 +4,12 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "HolgerHansPeterFreyther 8/12/2015 16:36",
+	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "SMPPMongoDIDCustomerRest",
+		"database",
+		"logger" ],
+	"name" : "SMPPMongoRestBase",
 	"pools" : [
 		 ],
-	"super" : "SMPPMongoRestBase",
+	"super" : "ZnJSONRestCall",
 	"type" : "normal" }
