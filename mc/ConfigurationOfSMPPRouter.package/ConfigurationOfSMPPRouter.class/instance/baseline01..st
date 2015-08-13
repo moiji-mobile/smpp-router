@@ -25,7 +25,13 @@ baseline01: spec
 				spec
 					className: #ConfigurationOfVoyageMongo;
 					versionString: #'stable';
-					repository: 'http://smalltalkhub.com/mc/Pharo/MetaRepoForPharo30/main/' ].
+					repository: 'http://smalltalkhub.com/mc/Pharo/MetaRepoForPharo30/main/' ];
+			project: 'ZincHTTPComponents' with: [
+				spec
+					className: #ConfigurationOfZincHTTPComponents;
+					versionString: #'stable';
+					loads: #('REST' );
+					repository: 'http://mc.stfx.eu/ZincHTTPComponents/' ].
 		spec package: #SMPPRouter with: [
-				spec requires: #('SMPP' 'OsmoLogging' 'VoyageMongo' ). ].
+				spec requires: #('SMPP' 'OsmoLogging' 'VoyageMongo' 'ZincHTTPComponents' ). ].
 		spec group: 'default' with: #(#SMPPRouter 'RFB' ). ].
