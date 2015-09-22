@@ -2,5 +2,7 @@
 	"class" : {
 		"on:" : "HolgerHansPeterFreyther 9/7/2014 16:48" },
 	"instance" : {
-		"patchCommand:from:to:" : "HolgerHansPeterFreyther 2/23/2015 17:10",
+		"patchBody:from:to:" : "HolgerHansPeterFreyther 9/22/2015 17:16",
+		"patcherName" : "HolgerHansPeterFreyther 9/22/2015 16:59",
+		"patcherName:" : "HolgerHansPeterFreyther 9/22/2015 16:59",
 		"router:" : "HolgerHansPeterFreyther 9/7/2014 17:10" } }

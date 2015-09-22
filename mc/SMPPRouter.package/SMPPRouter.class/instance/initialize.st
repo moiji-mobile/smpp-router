@@ -4,6 +4,7 @@ initialize
 	filter := SMPPNoFilter on: self.
 	patcher := SMPPNoPatcher on: self.
 	logger := LogStructuredLogger for: self area: #smppRouter.
+	patchers := OrderedCollection new.
 
 	"Stats/Counters"
 	routeReqCounter := OsmoCounter initWithName: 'RouteRequest'.

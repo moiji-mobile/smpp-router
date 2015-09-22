@@ -17,7 +17,7 @@ routeCommand: aCommand from: aHandler
 
 	"Patch the message now that we know the remote"
 	origSeqNumber := aCommand header sequenceNumber.
-	body := patcher patchCommand: aCommand from: aHandler to: remoteRule first.
+	body := self patch: aCommand from: aHandler to: remoteRule first rule: remoteRule second.
 
 	"Now build a command send it. This gets a new sequence number"
 	smppCommand := SMPPCommand new

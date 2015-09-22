@@ -15,7 +15,8 @@
 		"routeReqCounter",
 		"filterCounter",
 		"timeoutCounter",
-		"watchdogProc" ],
+		"watchdogProc",
+		"patchers" ],
 	"name" : "SMPPRouter",
 	"pools" : [
 		 ],

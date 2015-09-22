@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"router" ],
+		"router",
+		"patcherName" ],
 	"name" : "SMPPPatcher",
 	"pools" : [
 		 ],

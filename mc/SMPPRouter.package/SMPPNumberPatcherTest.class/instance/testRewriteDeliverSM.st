@@ -5,7 +5,7 @@ testRewriteDeliverSM
 	self assert: deliverSM body sourceAddress equals: '1888817024782276'.
 	self assert: deliverSM body destinationAddress equals: '1888817024782276'.
 
-	body := smppRouter patcher patchCommand: deliverSM from: nil to: nil.
+	body := smppRouter patcher patchBody: deliverSM body from: nil to: nil.
 	
 	self assert: body sourceAddress equals: '17024782276'.
 	self assert: body destinationAddress equals: '17024782276'.
