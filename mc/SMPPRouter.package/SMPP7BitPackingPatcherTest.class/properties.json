@@ -1,0 +1,15 @@
+{
+	"category" : "SMPPRouter-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"smppRouter",
+		"sevenBitPatcher" ],
+	"name" : "SMPP7BitPackingPatcherTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }
