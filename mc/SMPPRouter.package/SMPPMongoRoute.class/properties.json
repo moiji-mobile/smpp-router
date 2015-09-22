@@ -11,5 +11,5 @@
 	"name" : "SMPPMongoRoute",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "SMPPRouteBase",
 	"type" : "normal" }

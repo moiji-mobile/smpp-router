@@ -6,10 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"sourceId",
-		"destinationId" ],
-	"name" : "SMPPSystemIdRoute",
+		 ],
+	"name" : "SMPPRouteBase",
 	"pools" : [
 		 ],
-	"super" : "SMPPRouteBase",
+	"super" : "Object",
 	"type" : "normal" }
