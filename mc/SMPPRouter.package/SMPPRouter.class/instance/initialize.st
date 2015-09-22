@@ -7,6 +7,7 @@ initialize
 	patchers := OrderedCollection new.
 
 	"Stats/Counters"
+	statsdClient := NullStatsDClient new.
 	routeReqCounter := OsmoCounter initWithName: 'RouteRequest'.
 	unroutableCounter := OsmoCounter initWithName: 'Unroutable'.
 	responseCounter := OsmoCounter initWithName: 'Response'.

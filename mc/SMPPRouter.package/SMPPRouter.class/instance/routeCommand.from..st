@@ -4,10 +4,12 @@ routeCommand: aCommand from: aHandler
 
 	logger logNotice: 'Routing message to system' with: {'cmd'->aCommand. 'from'->aHandler}.
 	routeReqCounter increment.
+	statsdClient increment: 'smppRouter.routing' rate: 1.
 
 	"See if we can forward the message?"
 	(filter filterCommand: aCommand from: aHandler) ifTrue: [
 		filterCounter increment.
+		statsdClient increment: 'smppRouter.filtered' rate: 1.
 		^self].
 
 	"We have a new command and need to select a route"
@@ -30,6 +32,8 @@ routeCommand: aCommand from: aHandler
 			self returnResponse: result to: aHandler with: origSeqNumber];
 		onTimeout: [
 			timeoutCounter increment.
+			statsdClient increment: 'smppRouter.timeout' rate: 1.
+			statsdClient flush.
 			logger logError: 'Command timed out. Ignoring' with: {aCommand. aHandler}.
 			 "TODO!"
 		];

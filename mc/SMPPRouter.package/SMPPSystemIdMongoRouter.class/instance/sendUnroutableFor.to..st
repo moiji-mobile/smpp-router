@@ -5,6 +5,7 @@ sendUnroutableFor: aCommand to: aHandler
 	here"
 	logger logError: 'Command unroutable. Replying positively' with: {'cmd'->aCommand.  'to'->aHandler}.
 	unroutableCounter increment.
+	statsdClient increment: 'smppRouter.unroutable' rate: 1.
 
 	response := SMPPMessage new
 					header: (SMPPPDUHeader new

@@ -5,8 +5,11 @@ addConnection: aConnection
 
 	aConnection
 		onUnhandledCommand: [:handler :msg |
-			self routeCommand: msg from: handler];
+			self routeCommand: msg from: handler.
+			statsdClient flush];
 		onUnhandledResponse: [:handler :msg |
 			logger logError: 'Response to unknown command' with: {handler}.
+			statsdClient increment: 'smppRouter.unhandledResponse' rate: 1.
+			statsdClient flush.
 		].
 	connections add: aConnection
