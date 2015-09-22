@@ -27,4 +27,4 @@ selectRouteFor: aCommand from: aHandler
 			| systemId |
 			systemId := route systemId.
 			logger logNotice: 'Selected route' with: { 'cmd'->aCommand. 'from'->aHandler.'dest'->dest.'systemId'->systemId}.
-			self connectionForSystemId: systemId from: aHandler].
+			{self connectionForSystemId: systemId from: aHandler. route}].

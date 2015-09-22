@@ -6,4 +6,4 @@ selectRouteFor: aCommand from: aHandler
 		logger logNotice: 'no routes' with: {'cmd'->aCommand. 'from'->aHandler}.
 		^nil].
 
-	^self connectionForSystemId: route destinationId from: aHandler
+	^{self connectionForSystemId: route destinationId from: aHandler. route}

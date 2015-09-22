@@ -9,4 +9,4 @@ testRouteLookup
 
 
 	conn := smppRouter selectRouteFor: nil from: source.
-	self assert: conn == dest.
+	self assert: conn first == dest.

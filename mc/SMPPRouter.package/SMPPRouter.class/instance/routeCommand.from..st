@@ -1,6 +1,6 @@
 as yet unclassified
 routeCommand: aCommand from: aHandler
-	| remote smppCommand body origSeqNumber |
+	| remoteRule smppCommand body origSeqNumber |
 
 	logger logNotice: 'Routing message to system' with: {'cmd'->aCommand. 'from'->aHandler}.
 	routeReqCounter increment.
@@ -11,13 +11,13 @@ routeCommand: aCommand from: aHandler
 		^self].
 
 	"We have a new command and need to select a route"
-	remote := self selectRouteFor: aCommand from: aHandler.
-	remote ifNil: [
+	remoteRule := self selectRouteFor: aCommand from: aHandler.
+	remoteRule ifNil: [
 		^self sendUnroutableFor: aCommand to: aHandler].
 
 	"Patch the message now that we know the remote"
 	origSeqNumber := aCommand header sequenceNumber.
-	body := patcher patchCommand: aCommand from: aHandler to: remote.
+	body := patcher patchCommand: aCommand from: aHandler to: remoteRule first.
 
 	"Now build a command send it. This gets a new sequence number"
 	smppCommand := SMPPCommand new
@@ -34,4 +34,4 @@ routeCommand: aCommand from: aHandler
 			 "TODO!"
 		];
 		yourself.
-	remote scheduleCommand: smppCommand.
+	remoteRule first scheduleCommand: smppCommand.
