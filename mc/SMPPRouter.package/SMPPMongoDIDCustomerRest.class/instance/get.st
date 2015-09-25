@@ -9,5 +9,6 @@ get
 		'customerName' -> customer customerName.
 		'sipProxyIP' -> customer sipProxyIP.
 		'sipProxyPort' -> customer sipProxyPort.
-		'systemId' -> customer systemId. 
+		'systemId' -> customer systemId.
+		'smppPatcherNames' -> customer patcherNames.
 	} asDictionary.

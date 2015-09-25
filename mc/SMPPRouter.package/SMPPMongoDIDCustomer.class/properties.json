@@ -9,7 +9,8 @@
 		"customerName",
 		"systemId",
 		"sipProxyIp",
-		"sipProxyPort" ],
+		"sipProxyPort",
+		"patcherNames" ],
 	"name" : "SMPPMongoDIDCustomer",
 	"pools" : [
 		 ],

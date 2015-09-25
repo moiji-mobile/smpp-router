@@ -18,7 +18,6 @@ put
 
 
 	route
-		customer: customer;
-		patcherNames: (data at: 'patcherNames').
+		customer: customer.
 	database save: route.
 	self emptyOkResponse

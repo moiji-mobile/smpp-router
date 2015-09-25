@@ -13,6 +13,7 @@ put
 	customer
 		sipProxyIP: (data at: 'sipProxyIP');
 		sipProxyPort: (data at: 'sipProxyPort');
+		patcherNames: (data at: 'smppPatcherNames');
 		systemId: (data at: 'systemId').
 	database save: customer.
 	self emptyOkResponse

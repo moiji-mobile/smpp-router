@@ -1,10 +1,12 @@
 {
 	"class" : {
 		"descriptionContainer" : "HolgerHansPeterFreyther 7/3/2015 12:11",
-		"isVoyageRoot" : "HolgerHansPeterFreyther 7/3/2015 11:30" },
+		"isVoyageRoot" : "HolgerHansPeterFreyther 7/3/2015 11:30",
+		"mongoIgnorePatchNames" : "HolgerHansPeterFreyther 9/25/2015 17:27" },
 	"instance" : {
 		"customer" : "HolgerHansPeterFreyther 8/2/2015 19:03",
 		"customer:" : "HolgerHansPeterFreyther 7/23/2015 11:12",
 		"msisdn" : "HolgerHansPeterFreyther 8/2/2015 19:13",
 		"msisdn:" : "HolgerHansPeterFreyther 7/3/2015 11:31",
+		"patcherNames" : "HolgerHansPeterFreyther 9/25/2015 17:29",
 		"systemId" : "HolgerHansPeterFreyther 7/23/2015 11:08" } }
