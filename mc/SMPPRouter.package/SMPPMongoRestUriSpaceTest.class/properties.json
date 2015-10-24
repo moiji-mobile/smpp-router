@@ -1,0 +1,14 @@
+{
+	"category" : "SMPPRouter-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"restSpace" ],
+	"name" : "SMPPMongoRestUriSpaceTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }
