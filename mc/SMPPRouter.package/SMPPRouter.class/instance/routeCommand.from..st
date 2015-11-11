@@ -17,6 +17,13 @@ routeCommand: aCommand from: aHandler
 	remoteRule ifNil: [
 		^self sendUnroutableFor: aCommand to: aHandler].
 
+	"There is a route but no connection for it Drop the message."
+	remoteRule first ifNil: [
+		statsdClient increment: 'smppRouter.noSystemId' rate: 1.
+		logger logError: 'No connection for destination route. Dropping' with: {aCommand. aHandler}.
+		^self.
+	].
+
 	"Patch the message now that we know the remote"
 	origSeqNumber := aCommand header sequenceNumber.
 	body := self patch: aCommand from: aHandler to: remoteRule first rule: remoteRule second.
