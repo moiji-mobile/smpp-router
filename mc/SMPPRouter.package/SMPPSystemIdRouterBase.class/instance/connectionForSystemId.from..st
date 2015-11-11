@@ -11,5 +11,5 @@ connectionForSystemId: routeName from: aHandler
 					logger logDebug: 'Selected route' with: {'from'->aHandler. 'to'->conn}.
 					^conn]]]].
 
-	logger logNotice: 'No route available' with: {'from'->aHandler. 'routeName' -> routeName}.
+	logger logNotice: 'No connection available' with: {'from'->aHandler. 'systemId' -> routeName}.
 	^nil
