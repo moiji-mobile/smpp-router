@@ -1,0 +1,9 @@
+VER=$(shell xmllint --xpath "//revision[last()]/revnumber/text()" $(DOC)-docinfo.xml)
+
+$(DOC)-v$(VER).pdf: $(DOC)-docinfo.xml $(DOC).txt styles/custom-dblatex.sty $(DOC_EXTRA_DEPS)
+	a2x -L --dblatex-opts=" -s styles/custom-dblatex.sty" -a docinfo $(DOC).txt
+	mv $(DOC).pdf $(DOC)-v$(VER).pdf
+
+clean:
+	$(RM) $(DOC)*.pdf
+

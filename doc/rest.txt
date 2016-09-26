@@ -1,0 +1,57 @@
+Customer Management
+^^^^^^^^^^^^^^^^^^^
+
+Creating a customer entry::
+----
+$ curl -H "Content-Type: application/json" -XPUT \
+http://localhost:1700/v1/customer/Customer \
+ -d '{ \
+	"systemId": "SysId", \
+	"sipProxyIP": "10.2.3.4", \
+	"smppPatcherNames": ["PackBits"], \
+	"sipProxyPort": 5060}'
+----
+
+Getting a customer entry::
+----
+$ curl -H "Content-Type: application/json" -XGET \
+http://localhost:1700/v1/customer/Customer
+{
+	"sipProxyPort" : 5060,
+	"systemId" : "SysId",
+	"customerName" : "Customer",
+	"smppPatcherNames": ["PackBits"],
+	"sipProxyIP" : "10.2.3.4"
+}
+
+----
+
+MSISDN Mapping Management
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Creating a mapping::
+----
+$ curl -H "Content-Type: application/json" -XPUT \
+http://localhost:1700/v1/routing/49123456 \
+-d '{"customerName": "Customer"}'
+----
+
+
+Getting a mapping::
+----
+$ curl -H "Content-Type: application/json" -XGET \
+http://localhost:1700/v1/routing/49123456
+{
+	"customerName" : "Customer",
+	"msisdn" : "49123456"
+}
+----
+
+
+Deleting a mapping::
+----
+$ curl -H "Content-Type: application/json" -XDELETE \
+http://localhost:1700/v1/routing/49123456
+OK
+----
+
