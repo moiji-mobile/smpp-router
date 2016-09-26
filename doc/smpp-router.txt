@@ -1,6 +1,6 @@
-StrongLeaf SMPPRouter Design Document
-=====================================
-Holger Freyther <holger@freyther.de>
+SMPPRouter Design Document
+==========================
+Holger Freyther <holger@moiji-mobile.com>
 
 
 Introduction
