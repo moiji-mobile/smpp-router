@@ -3,7 +3,7 @@ baseline: spec
 	<baseline>
 
 	spec for: #'common' do: [
-	spec 
+		spec 
 			project: 'RFB' with: [
 				spec
 					className: #ConfigurationOfRFB;
@@ -16,11 +16,6 @@ baseline: spec
 					className: #ConfigurationOfOsmoLogging;
 					versionString: '2';
 					repository: 'http://smalltalkhub.com/mc/osmocom/Logging/main/' ];
-			project: 'VoyageMongo' with: [
-				spec
-					className: #ConfigurationOfVoyageMongo;
-					versionString: '1.3.1';
-					repository: 'http://smalltalkhub.com/mc/Pharo/MetaRepoForPharo30/main/' ];
 			project: 'ZincHTTPComponents' with: [
 				spec
 					className: #ConfigurationOfZincHTTPComponents;
@@ -32,7 +27,20 @@ baseline: spec
 					className: #ConfigurationOfStatsDClient;
 					versionString: '3';
 					repository: 'http://smalltalkhub.com/mc/hfreyther2/StatsD/main/' ].
+	].
+
+	spec for: #(#'pharo3.x' #'pharo4.x' #'pharo5.x') do: [
+		spec baseline: 'VoyageMongo' with: [
+			spec repository: 'github://zecke/voyage-stable:1.3.1-patch/mc' ].
 		spec package: #SMPPRouter with: [
-				spec requires: #('SMPP' 'OsmoLogging' 'VoyageMongo' 'ZincHTTPComponents' 'StatsDClient' ). ].
-		spec group: 'default' with: #(#SMPPRouter 'RFB' ). 
-	]
+			spec requires: #('SMPP' 'OsmoLogging' 'VoyageMongo' 'ZincHTTPComponents' 'StatsDClient')].
+		spec group: 'default' with: #(#SMPPRouter 'RFB' )].
+	spec for: #'pharo6.x' do: [
+		spec baseline: 'Voyage' with: [
+			spec
+				repository: 'github://pharo-nosql/voyage:master/mc';
+				loads: #('mongo tests') ].
+		spec package: #SMPPRouter with: [
+			spec requires: #('SMPP' 'OsmoLogging' 'Voyage' 'ZincHTTPComponents' 'StatsDClient')].
+		spec group: 'default' with: #(#SMPPRouter 'RFB' )].
+
