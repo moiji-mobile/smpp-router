@@ -1,0 +1,25 @@
+language: smalltalk
+sudo: required
+
+os:
+- linux
+
+services:
+- mongodb # Essential to what we do
+- docker
+
+# Target mongodb v3.0 as lowest version
+addons:
+  apt:
+    sources:
+    - mongodb-3.0-precise
+    packages:
+    - mongodb-org-server
+
+smalltalk:
+- Pharo-3.0
+- Pharo-5.0
+# requires porting- Pharo-6.0
+
+script:
+- $SMALLTALK_CI_HOME/run.sh
