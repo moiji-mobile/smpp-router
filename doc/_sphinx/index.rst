@@ -8,7 +8,10 @@ SMPPRouter Design Document
 Introduction
 ============
 
-The SMPPRouter will route SubmitSM and DeliverSM messages based on a
+The SMPPRouter was written by
+`moiji-mobile <https://www.moiji-mobile.com>`__ to split traffic
+depending on destination number and work-around limitiations of a
+proprietary MC. It will route SubmitSM and DeliverSM messages based on a
 configurable criteria between different links. It can be configured to
 multiple incoming and outgoing connections (and act either as ESME or
 MC) and each of them is associated with the SMPP systemId. For each

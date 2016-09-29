@@ -6,17 +6,20 @@ Holger Freyther <holger@moiji-mobile.com>
 Introduction
 ------------
 
-The SMPPRouter will route SubmitSM and DeliverSM messages based
-on a configurable criteria between different links. It can be
-configured to multiple incoming and outgoing connections (and
-act either as ESME or MC) and each of them is associated with
-the SMPP systemId. For each incoming message the outgoing path
-will be determined. Before forwarding the message various parts
-of the message and header can be patched.
+The SMPPRouter was written by https://www.moiji-mobile.com[moiji-mobile]
+to split traffic depending on destination number and work-around
+limitiations of a proprietary MC. It will route SubmitSM and
+DeliverSM messages based on a configurable criteria between
+different links. It can be configured to multiple incoming and
+outgoing connections (and act either as ESME or MC) and each of
+them is associated with the SMPP systemId. For each incoming
+message the outgoing path will be determined. Before forwarding
+the message various parts of the message and header can be patched.
 
 The extension to the SMPPRouter is the DIDManager that will look
 up the destination number in a database and determine where to
 forward the message.
+
 
 Features
 --------
